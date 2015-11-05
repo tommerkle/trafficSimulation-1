@@ -12,6 +12,8 @@ public class Road {
     int numLanes;
     int length;
     int width;
+    int throughput = length - 50; // throughput marker 50 px less than full length - so we can see it
+    int halfway = throughput/2; // halfway from start to throughput marker
 
     public Road(int numLanes, int length, int width) {
         this.numLanes = numLanes;
