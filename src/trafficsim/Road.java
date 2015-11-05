@@ -4,6 +4,9 @@
  */
 package trafficsim;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 /**
  *
  * @author Tyler
@@ -19,6 +22,17 @@ public class Road {
         this.numLanes = numLanes;
         this.length = length;
         this.width = width;
+    }
+    
+    public void paint(Graphics g) { // paint the road
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setColor(Color.BLACK);
+        int xIndex = 0;
+        while (xIndex < length) {
+            g2.drawLine(xIndex, 10, xIndex + 50, 10);
+            g2.drawLine(xIndex, 90, xIndex + 50, 90);
+            xIndex += 100;
+        }
     }
 
     
